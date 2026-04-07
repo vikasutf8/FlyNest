@@ -6,6 +6,6 @@ spring:
     name: location-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/booking-flynest
-    username: booking
-    password:
+    url: jdbc:mysql://localhost:3306/saas-booking
+    username: pos-booking
+    password: pos-booking
