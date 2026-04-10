@@ -1,5 +1,7 @@
 package com.flynest.location_service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.flynest.emabbedable.Address;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,22 +16,24 @@ import lombok.*;
 public class Airport {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true,length = 3)
     private String iata;
-
+    @Column(nullable = false)
     private String name;
 
-    private String timezoneId;
-
-    private String address;
+    private String timeZoneId;
 
     @Embedded
-    private GeoCode geoCode;
+    private Address address;
+
+    @Embedded
+    private com.flynest.emabbedable.GeoCode geoCode;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinColumn(name = "city_id", nullable = false)
     private City city;
 }

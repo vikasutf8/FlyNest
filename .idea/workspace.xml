@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Add initial implementation of location service with API response and Docker setup">
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/CityRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/CityResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/CityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/controller/CityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/GeoCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/CityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/CityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/pom.xml" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement City and Airport models with corresponding controller, service, and repository layers">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AirportRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirportResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/AirportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/controller/AirportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/mapper/AirportMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/AirportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/CityResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/CityResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/GeoCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/GeoCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -88,7 +91,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -158,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775553645081</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implement City and Airport models with corresponding controller, service, and repository layers">
+      <option name="closed" value="true" />
+      <created>1775568143987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568143987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +190,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure server settings and update project structure" />
     <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initial implementation of location service with API response and Docker setup" />
+    <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement City and Airport models with corresponding controller, service, and repository layers" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

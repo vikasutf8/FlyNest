@@ -18,8 +18,8 @@ import java.util.List;
 public class City {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @Column(unique = true, nullable = false)
     private String name;
