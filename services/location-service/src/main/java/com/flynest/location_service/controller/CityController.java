@@ -95,9 +95,5 @@ public class CityController {
         return ResponseEntity.ok(ApiResponse.success(exists));
     }
 
-    @GetMapping("/validate/{cityCode}")
-    public ResponseEntity<ApiResponse<Boolean>> validateCityCode(@PathVariable String cityCode) {
-        boolean valid = cityService.validateCityCode(cityCode);
-        return ResponseEntity.ok(ApiResponse.success(valid));
-    }
+
 }

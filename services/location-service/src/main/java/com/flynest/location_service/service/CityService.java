@@ -16,6 +16,6 @@ public interface CityService {
     Page<CityResponse> getCitiesByCountryCode(String countryCode,Pageable pageable);
 
     boolean cityExists(String cityCode);
-    boolean validateCityCode(String cityCode);
+
 }
 

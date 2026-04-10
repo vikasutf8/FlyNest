@@ -21,12 +21,14 @@ public class City {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Column(unique = true, nullable = false)
     private String name;
-
+    @Column(nullable = false)
     private String countryCode;
 
     private String country;
 
+    @Column(unique = true, nullable = false)
     private String cityCode;
 
     private String regionCode;

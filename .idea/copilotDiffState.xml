@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/ApiResponse (snapshot).java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ApiResponse (snapshot).java" />
+              <option name="originalContent" value="package com.flynest.payload.response;&#10;&#10;&#10;import lombok.Data;&#10;&#10;@Data&#10;public class ApiResponse {&#10;&#10;&#10;    private String message;&#10;}&#10;" />
+              <option name="updatedContent" value="package com.flynest.payload.response;&#10;&#10;public class ApiResponse {&#10;&#10;    private String message;&#10;&#10;    public String getMessage() {&#10;        return message;&#10;    }&#10;&#10;    public void setMessage(String message) {&#10;        this.message = message;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
