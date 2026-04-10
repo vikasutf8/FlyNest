@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement City and Airport models with corresponding controller, service, and repository layers">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AirportRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirportResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/AirportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/controller/AirportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/mapper/AirportMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/AirportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/CityResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/CityResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/model/GeoCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/GeoCode.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice" value="3BvBAGlnbD2vrj3f9YEXOILAxla" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vikasutf8&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:vikasutf8/FlyNest.git&quot;,
+    &quot;accountId&quot;: &quot;c98f6c52-148a-4b38-811b-d63b84543c38&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3BvBAGlnbD2vrj3f9YEXOILAxla" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.location-service.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.LocationServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev-work",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$/common-lib" />
+      <recent name="$PROJECT_DIR$/cloud" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common-lib/src/main/java/com.flynest" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Microservice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Microservice" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LocationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="location-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flynest.location_service.LocationServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flynest.location_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.LocationServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="" />
+      <created>1775359518899</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775359518899</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Configure server settings and update project structure">
+      <option name="closed" value="true" />
+      <created>1775545977645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775545977645</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add initial implementation of location service with API response and Docker setup">
+      <option name="closed" value="true" />
+      <created>1775553645081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775553645081</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement City and Airport models with corresponding controller, service, and repository layers">
+      <option name="closed" value="true" />
+      <created>1775568143987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775568143987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Configure server settings and update project structure" />
+    <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
+    <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement City and Airport models with corresponding controller, service, and repository layers" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
