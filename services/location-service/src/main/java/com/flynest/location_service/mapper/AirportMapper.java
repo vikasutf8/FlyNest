@@ -20,7 +20,7 @@ public class AirportMapper {
         return Airport.builder()
                 .iata(request.getIata())
                 .name(request.getName())
-                .timeZoneId(request.getTimeZoneId())
+                .timeZone(request.getTimeZoneId())
                 .address(request.getAddress())
                 .geoCode(request.getGeoCode())
                 // city is NOT set here — always set manually in service
@@ -33,7 +33,7 @@ public class AirportMapper {
                 .id(airport.getId())
                 .iata(airport.getIata())
                 .name(airport.getName())
-                .timeZoneId(airport.getTimeZoneId())
+                .timeZoneId(airport.getTimeZone())
                 .address(airport.getAddress())
                 .geoCode(airport.getGeoCode())
                 .city(CityMapper.toDto(airport.getCity()))  // City → CityResponse
@@ -44,7 +44,7 @@ public class AirportMapper {
     public static void updateEntityFromRequest(AirportRequest request, Airport airport) {
         if (request.getIata()       != null) airport.setIata(request.getIata());
         if (request.getName()       != null) airport.setName(request.getName());
-        if (request.getTimeZoneId() != null) airport.setTimeZoneId(request.getTimeZoneId());
+        if (request.getTimeZoneId() != null) airport.setTimeZone(request.getTimeZoneId());
         if (request.getAddress()    != null) airport.setAddress(request.getAddress());
         if (request.getGeoCode()    != null) airport.setGeoCode(request.getGeoCode());
         // city is NOT touched here — handled separately in service

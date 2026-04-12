@@ -11,8 +11,9 @@ public class HomeController {
 
     @GetMapping("")
     public String HomeController(){
-        ApiResponse response = new ApiResponse();
-        response.setMessage("Welcome to Location Service API");
-        return response.getMessage();
+//        ApiResponse response = new ApiResponse();
+//        response.setMessage("Welcome to Location Service API");
+//        return response.getMessage();
+        return  "this is home controller";
     }
 }

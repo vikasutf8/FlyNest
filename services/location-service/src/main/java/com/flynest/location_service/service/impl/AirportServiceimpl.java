@@ -33,7 +33,9 @@ public class AirportServiceimpl implements AirportService {
 
         City city = cityRepository.findById(request.getCityId())
                 .orElseThrow(() -> new IllegalArgumentException("City not found with id: " + request.getCityId()));
-
+        if (airportRepository.existsByIataIgnoreCase(request.getIata())) {
+            throw new IllegalArgumentException("Airport with IATA code already exists: " + request.getIata());
+        }
         Airport airport = AirportMapper.toEntity(request);
         airport.setCity(city);
 //        return  null;
@@ -49,8 +51,13 @@ public class AirportServiceimpl implements AirportService {
             City city = cityRepository.findById(request.getCityId())
                     .orElseThrow(() -> new IllegalArgumentException("City not found with id: " + request.getCityId()));
             existing.setCity(city);
+        }
 
-
+        // same and already present IATA code we can;t update that ...meant findBYIataCode ...should be unique
+        if (request.getIata() != null && !request.getIata().equals(existing.getIata())) {
+            if (airportRepository.existsByIataIgnoreCase(request.getIata())) {
+                throw new IllegalArgumentException("Airport with IATA code already exists: " + request.getIata());
+            }
         }
         AirportMapper.updateEntityFromRequest(request, existing);
         Airport updated = airportRepository.save(existing);

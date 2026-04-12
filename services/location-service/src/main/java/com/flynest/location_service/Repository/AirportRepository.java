@@ -22,4 +22,6 @@ public interface AirportRepository extends JpaRepository<Airport, Long> {
 
     // Verify city has any airports at all
     boolean existsByCityId(Long cityId);
+
+
 }

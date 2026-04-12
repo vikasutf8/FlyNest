@@ -5,6 +5,8 @@ import com.flynest.emabbedable.Address;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.beans.Transient;
+
 @Entity
 @Table(name = "airports", indexes = {
         @Index(name = "idx_iata", columnList = "iata", unique = true)
@@ -24,7 +26,8 @@ public class Airport {
     @Column(nullable = false)
     private String name;
 
-    private String timeZoneId;
+    @Column(name = "time_zone_id", length = 50)
+    private String timeZone;
 
     @Embedded
     private Address address;
@@ -36,4 +39,13 @@ public class Airport {
     @JsonIgnore
     @JoinColumn(name = "city_id", nullable = false)
     private City city;
+
+    @JsonIgnore
+    @Transient
+    public String getDetailName(){
+        if(city != null && city.getCityCode() != null){
+            return name.toUpperCase() +"/"+ city.getCityCode();
+        }
+        return name.toUpperCase();
+    }
 }
