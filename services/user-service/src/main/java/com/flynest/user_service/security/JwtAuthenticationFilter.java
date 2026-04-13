@@ -23,9 +23,9 @@ import java.io.IOException;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class    JwtAuthenticationFilter extends OncePerRequestFilter {
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private final JwtService             jwtService;
+    private final JwtService jwtService;
     private final UserDetailsServiceImpl userDetailsService;
 
     @Override

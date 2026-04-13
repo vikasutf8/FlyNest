@@ -16,6 +16,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsPasswordService;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -23,51 +24,22 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity                   // enables @PreAuthorize on controllers
-@RequiredArgsConstructor
+@EnableMethodSecurity
+@RequiredArgsConstructor                        // ✅ Lombok generates constructor
 public class SecurityConfig {
 
+    private final UserDetailsServiceImpl  userDetailsService;
     private final JwtAuthenticationFilter jwtAuthFilter;
-    private final UserDetailsServiceImpl userDetailsService;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(AbstractHttpConfigurer::disable)
-                .sessionManagement(session ->
-                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-
-                .authorizeHttpRequests(auth -> auth
-
-                        // ── Public endpoints — no token needed
-                        .requestMatchers(
-                                "/api/v1/auth/login",
-                                "/api/v1/auth/register"
-                        ).permitAll()
-
-                        // ── System admin only
-                        .requestMatchers("/api/v1/admin/**")
-                        .hasRole("SYSTEM_ADMIN")
-
-                        // ── Airline admin + system admin
-                        .requestMatchers("/api/v1/airlines/**")
-                        .hasAnyRole("AIRLINE_ADMIN", "SYSTEM_ADMIN")
-
-                        // ── Everything else needs to be authenticated
-                        .anyRequest().authenticated()
-                )
-
-                // ── Plug JWT filter before Spring's username/password filter
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider(userDetailsService);
-        provider.setUserDetailsPasswordService((UserDetailsPasswordService) userDetailsService);
-        provider.setPasswordEncoder(passwordEncoder());
+        DaoAuthenticationProvider provider =
+                new DaoAuthenticationProvider(userDetailsService);
         return provider;
     }
 
@@ -78,7 +50,20 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authenticationProvider(authenticationProvider())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/v1/auth/**",
+                                "/api/v1/auth/login",
+                                "/api/v1/auth/register").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
     }
 }

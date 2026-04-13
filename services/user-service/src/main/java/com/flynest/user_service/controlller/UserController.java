@@ -49,7 +49,7 @@ public class UserController {
 
     // ── Controller — no @RequestHeader needed at all
     @GetMapping("/me")
-    public ResponseEntity<ApiResponse<UserDto>> getProfile() {
+    public ResponseEntity<ApiResponse<UserDto>> getProfile() throws Exception {
         log.info("REST request to get current user profile");
         UserDto user = userService.getProfile();
         return ResponseEntity.ok(ApiResponse.success(user));

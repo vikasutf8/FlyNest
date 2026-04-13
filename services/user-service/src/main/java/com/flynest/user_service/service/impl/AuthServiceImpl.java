@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-@Transactional(readOnly = true)
+@Transactional()
 public class AuthServiceImpl implements AuthService {
 
     private final AuthRepository authRepository;
