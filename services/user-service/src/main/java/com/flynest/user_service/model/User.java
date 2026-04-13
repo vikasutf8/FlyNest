@@ -2,6 +2,7 @@ package com.flynest.user_service.model;
 
 // ── User Entity ──────────────────────────────────────────────────────────────
 
+import com.flynest.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -37,7 +38,7 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role;
+    private UserRole role;
 
     @Column(nullable = false)
     private boolean verified = false;

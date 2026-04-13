@@ -1,7 +1,10 @@
 package com.flynest.payload.dto;
 
+import com.flynest.enums.UserRole;
 import jakarta.validation.constraints.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Builder
 @Data
@@ -9,6 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 public class UserDto {
 
+    private Long id;
 
     @NotBlank(message = "Full name is required")
     @Size(min = 2, max = 100, message = "Full name must be between 2 and 100 characters")
@@ -30,5 +34,12 @@ public class UserDto {
     private String phone;                       // optional — no @NotBlank
 
     @NotNull(message = "Role is required")
-    private Role role;
+    private UserRole role;
+
+    private boolean verified=false;
+
+
+    private LocalDateTime lastLogined;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

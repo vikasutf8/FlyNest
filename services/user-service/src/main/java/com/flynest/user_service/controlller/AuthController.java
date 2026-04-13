@@ -28,7 +28,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<ApiResponse<AuthResponse>> register(
-            @Validated @RequestBody UserDto request) {
+            @Validated @RequestBody UserDto request) throws Exception {
         log.info("REST request to register user with email: {}", request.getEmail());
         AuthResponse response = authService.register(request);
         return ResponseEntity
@@ -38,9 +38,9 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<AuthResponse>> login(
-            @Validated @RequestBody LoginRequest request) {
+            @Validated @RequestBody LoginRequest request) throws Exception {
         log.info("REST request to login user with email: {}", request.getEmail());
-        AuthResponse response = authService.login(request.getEmail(), request.getPassword());
+        AuthResponse response = authService.login(request);
         return ResponseEntity.ok(ApiResponse.success("Login successful", response));
     }
 }
