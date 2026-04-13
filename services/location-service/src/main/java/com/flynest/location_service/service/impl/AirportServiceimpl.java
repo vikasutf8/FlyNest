@@ -1,7 +1,7 @@
 package com.flynest.location_service.service.impl;
 
-import com.flynest.location_service.Repository.AirportRepository;
-import com.flynest.location_service.Repository.CityRepository;
+import com.flynest.location_service.repository.AirportRepository;
+import com.flynest.location_service.repository.CityRepository;
 import com.flynest.location_service.mapper.AirportMapper;
 import com.flynest.location_service.model.Airport;
 import com.flynest.location_service.model.City;
@@ -9,7 +9,6 @@ import com.flynest.location_service.service.AirportService;
 import com.flynest.location_service.service.CityService;
 import com.flynest.payload.request.AirportRequest;
 import com.flynest.payload.response.AirportResponse;
-import com.flynest.payload.response.CityResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

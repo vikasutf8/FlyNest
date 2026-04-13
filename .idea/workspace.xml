@@ -4,7 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement City and Airport models with corresponding controller, service, and repository layers" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement user service with JWT authentication, user retrieval, and profile management">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/Config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/repository/AuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/src/test/java/com/flynest/user_service/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/target/classes/com/flynest/payload/response/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/target/classes/com/flynest/payload/response/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/repository/AirportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +67,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-work" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -36,6 +84,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:vikasutf8/FlyNest.git&quot;,
     &quot;accountId&quot;: &quot;c98f6c52-148a-4b38-811b-d63b84543c38&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;vikasutf8&quot;,
+    &quot;repository&quot;: &quot;FlyNest&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -69,8 +127,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.LocationServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "#3 on dev-work",
+    "git-widget-placeholder": "#3 on Merging dev-work",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services",
     "node.js.detected.package.eslint": "true",
@@ -78,7 +137,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,8 +150,11 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common-lib/src/main/java/com.flynest" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.flynest.user_service.Security" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Microservice" />
       <method v="2">
@@ -111,6 +173,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.flynest.location_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flynest.user_service.UserServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flynest.user_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,7 +232,39 @@
       <option name="project" value="LOCAL" />
       <updated>1775568143987</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement City and Airport models with corresponding controller, service, and repository layers">
+      <option name="closed" value="true" />
+      <created>1776013377983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776013377983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement user service with authentication, user registration, and login functionality">
+      <option name="closed" value="true" />
+      <created>1776016979635</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776016979635</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implement user authentication and registration with enhanced error handling">
+      <option name="closed" value="true" />
+      <created>1776061077478</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776061077478</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement user service with JWT authentication, user retrieval, and profile management">
+      <option name="closed" value="true" />
+      <created>1776065404888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776065404888</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
