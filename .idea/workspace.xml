@@ -5,48 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement user service with JWT authentication, user retrieval, and profile management">
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/Config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/UserServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/controlller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/repository/AuthRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/security/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/java/com/flynest/user_service/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-service/src/test/java/com/flynest/user_service/UserServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/Support.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/AirlineStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AirlineRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/mapper/AirlineMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/model/Airline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/AirlineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/target/classes/com/flynest/payload/response/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/target/classes/com/flynest/payload/response/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/repository/AirportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/repository/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/AirportServiceimpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/java/com/flynest/location_service/service/impl/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -126,10 +104,11 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.AirlineCoreServiceApplication.executor": "Run",
     "Spring Boot.LocationServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "#3 on Merging dev-work",
+    "git-widget-placeholder": "dev-work-core-service",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services",
     "node.js.detected.package.eslint": "true",
@@ -154,7 +133,7 @@
       <recent name="com.flynest.user_service.Security" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AirlineCoreServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Microservice" />
       <method v="2">
@@ -166,7 +145,21 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="LocationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="AirlineCoreServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="airline-core-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flynest.airline_core_service.AirlineCoreServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flynest.airline_core_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="location-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.flynest.location_service.LocationServiceApplication" />
@@ -180,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.flynest.user_service.UserServiceApplication" />
@@ -194,11 +187,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.LocationServiceApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -264,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776065404888</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement user service with JWT authentication, user retrieval, and profile management">
+      <option name="closed" value="true" />
+      <created>1776071896093</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776071896093</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
