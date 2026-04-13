@@ -1,5 +1,7 @@
 package com.flynest.airline_core_service.service.impl;
 
+import com.flynest.airline_core_service.mapper.AirlineMapper;
+import com.flynest.airline_core_service.model.Airline;
 import com.flynest.airline_core_service.repository.AirlineRepository;
 import com.flynest.airline_core_service.service.AirlineService;
 import com.flynest.enums.AirlineStatus;
@@ -26,41 +28,73 @@ public class AirlineServiceImpl implements AirlineService {
 
     @Override
     public AirlineResponse createAirline(AirlineRequest request, Long ownerId) {
-        return null;
+        Airline savedAirline =airlineRepository.save(AirlineMapper.toEntity(request, ownerId));
+        return AirlineMapper.toResponse(savedAirline);
     }
 
     @Override
     public AirlineResponse getAirlineByOwnerId(Long ownerId) {
-        return null;
+        Airline airline =airlineRepository.findByOwnerId(ownerId).orElseThrow(() -> new RuntimeException("Airline not found for ownerId: " + ownerId));
+        return AirlineMapper.toResponse(airline);
     }
 
     @Override
     public AirlineResponse getAirlineById(Long airlineId) {
-        return null;
+        Airline airline =airlineRepository.findById(airlineId).orElseThrow(() -> new RuntimeException("Airline not found for id: " + airlineId));
+        return AirlineMapper.toResponse(airline);
     }
 
     @Override
     public Page<AirlineResponse> getAllAirlines(Pageable pageable) {
-        return null;
+        return airlineRepository.findAll(pageable).map(AirlineMapper::toResponse);
     }
 
     @Override
     public AirlineResponse updateAirline(Long airlineId, AirlineRequest request, Long ownerId) {
-        return null;
+        Airline airlineToUpdate;
+//        if(airlineRepository.existsById(airlineId)) {
+//           airlineToUpdate = airlineRepository.findById(airlineId).orElseThrow(() -> new RuntimeException("Airline not found for id: " + airlineId));
+//        } else {
+//            throw new RuntimeException("Airline not found for id: " + airlineId);
+//        }
+
+        if(airlineRepository.existByOwnerId(ownerId)){
+            airlineToUpdate =airlineRepository.findByOwnerId(ownerId).orElseThrow(() -> new RuntimeException("Airline not found for ownerId: " + ownerId));
+        }else{
+            throw new RuntimeException("Airline not found for id: " + ownerId);
+        }
+        AirlineMapper.updateEntityFromRequest(request,airlineToUpdate);
+        airlineToUpdate =airlineRepository.save(airlineToUpdate);
+
+        return AirlineMapper.toResponse(airlineToUpdate);
     }
 
     @Override
     public void deleteAirline(Long airlineId, Long ownerId) {
-
+        if(airlineRepository.existsById(airlineId) && airlineRepository.existByOwnerId(ownerId)) {
+            airlineRepository.deleteById(airlineId);
+        } else {
+            throw new RuntimeException("Airline not found for id: " + airlineId);
+        }
     }
 
     @Override
     public AirlineResponse changeStatusByAdmin(Long airlineId, AirlineStatus status) {
-        return null;
+        Airline airlineToUpdate = airlineRepository.findById(airlineId).
+                orElseThrow(() -> new RuntimeException("Airline not found for id: " + airlineId));
+        airlineToUpdate.setStatus(status);
+        airlineToUpdate = airlineRepository.save(airlineToUpdate);
+        return AirlineMapper.toResponse(airlineToUpdate);
     }
 
     @Override
     public List<AirlineDropdownItem> getAirlineDropdown() {
-        return List.of();
+
+        return airlineRepository.findByStatus(AirlineStatus.ACTIVE.name()).stream().map(
+                airline -> AirlineDropdownItem.builder()
+                .id(airline.getId())
+                .name(airline.getName()).iataCode(airline.getIataCode()).icaoCode(airline.getIcaoCode()).logoUrl(airline.getLogoUrl())
+                .build()).toList();
+//        return List.of();
     }
 }

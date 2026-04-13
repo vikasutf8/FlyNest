@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement user service with JWT authentication, user retrieval, and profile management">
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/emabbedable/Support.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/AirlineStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AirlineRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/mapper/AirlineMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/model/Airline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/AirlineService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement airline core service with entity, repository, and service layers">
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/AirlineController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/location-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/services/location-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +116,7 @@
       <recent name="$PROJECT_DIR$/common-lib/src/main/java/com.flynest" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.flynest.airline_core_service.controller" />
       <recent name="com.flynest.user_service.Security" />
     </key>
   </component>
@@ -260,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776071896093</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement airline core service with entity, repository, and service layers">
+      <option name="closed" value="true" />
+      <created>1776094236987</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776094236987</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +276,8 @@
     <MESSAGE value="Configure server settings and update project structure" />
     <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
     <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement City and Airport models with corresponding controller, service, and repository layers" />
+    <MESSAGE value="Implement airline core service with entity, repository, and service layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement airline core service with entity, repository, and service layers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
