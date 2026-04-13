@@ -1,6 +1,6 @@
 package com.flynest.location_service.service.impl;
 
-import com.flynest.location_service.Repository.CityRepository;
+import com.flynest.location_service.repository.CityRepository;
 import com.flynest.location_service.mapper.CityMapper;
 import com.flynest.location_service.model.City;
 import com.flynest.location_service.service.CityService;

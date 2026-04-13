@@ -1,4 +1,4 @@
-package com.flynest.location_service.Repository;
+package com.flynest.location_service.repository;
 
 // ── AirportRepository ────────────────────────────────────────────────────────
 

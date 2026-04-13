@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Builder
 @Data
+
 public class ApiResponse<T> {
     private final boolean success;
     private final String message;
