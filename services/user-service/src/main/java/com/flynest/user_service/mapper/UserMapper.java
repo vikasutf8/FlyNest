@@ -36,8 +36,8 @@ public class UserMapper {
     public static AuthResponse toAuthResponse(User user, String token, String title) {
         return AuthResponse.builder()
                 .token(token)
-                .title(title)
-                .message("Welcome back, " + user.getFullName() + "!")
+                .title("Welcome back, " + user.getEmail() + "!")
+                .message(title)
                 .user(toResponse(user))
                 .build();
     }

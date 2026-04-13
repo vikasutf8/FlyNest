@@ -9,3 +9,8 @@ spring:
     url: jdbc:mysql://localhost:3306/saas-booking
     username: pos-booking
     password: pos-booking
+#  // ── application.yml ──────────────────────────────────────────────────────────
+
+  jwt:
+    secret: "your-256-bit-secret-key-here-make-it-long-enough"   # min 32 chars
+    expiration: 86400000   # 24 hours in milliseconds
