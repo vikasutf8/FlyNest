@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement airline core service with entity, repository, and service layers">
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/AirlineController.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement airline core service with controller, service, and repository layers">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/AircraftStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AircraftRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AircraftResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/model/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AirlineDropdownItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AirlineRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AirlineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/airline-core-service/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,29 +84,29 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.location-service.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.AirlineCoreServiceApplication.executor": "Run",
-    "Spring Boot.LocationServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dev-work-core-service",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.location-service.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AirlineCoreServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.LocationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-work-core-service&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/services" />
@@ -255,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776094236987</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement airline core service with controller, service, and repository layers">
+      <option name="closed" value="true" />
+      <created>1776098110650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1776098110650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +287,8 @@
     <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
     <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
     <MESSAGE value="Implement airline core service with entity, repository, and service layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement airline core service with entity, repository, and service layers" />
+    <MESSAGE value="Implement airline core service with controller, service, and repository layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement airline core service with controller, service, and repository layers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
