@@ -1,5 +1,6 @@
 package com.flynest.payload.request;
 
+import com.flynest.enums.AircraftStatus;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -61,6 +62,9 @@ public class AircraftRequest {
 
     @Future(message = "Next maintenance date must be in future")
     private LocalDate nextMaintenanceDate;
+
+
+    private AircraftStatus status;
 
     // Foreign key reference
     private Long currentAirportId;

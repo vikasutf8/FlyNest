@@ -1,10 +1,18 @@
 package com.flynest.payload.response;
 
 import com.flynest.enums.AircraftStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.time.LocalDate;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AircraftResponse {
     private Long id;
 
