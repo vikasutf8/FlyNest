@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Add flight-ops-service module with initial setup and configuration">
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/FlightStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/model/Flight.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Add flight entity and request/response models for flight operations">
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776499232186</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add flight entity and request/response models for flight operations">
+      <option name="closed" value="true" />
+      <created>1776515022664</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776515022664</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +266,8 @@
     <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
     <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
     <MESSAGE value="Add flight-ops-service module with initial setup and configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flight-ops-service module with initial setup and configuration" />
+    <MESSAGE value="Add flight entity and request/response models for flight operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add flight entity and request/response models for flight operations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
