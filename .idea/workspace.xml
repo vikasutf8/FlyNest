@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement aircraft service with controller, service, and repository layers">
-      <change afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/mapper/AircraftMapper.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement aircraft service with controller, service, repository, and mapper layers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AircraftRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/AircraftRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AircraftResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/AircraftResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/controller/AircraftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/repository/AircraftRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AircraftServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AircraftServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776397851389</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implement aircraft service with controller, service, repository, and mapper layers">
+      <option name="closed" value="true" />
+      <created>1776497022020</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1776497022020</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +309,8 @@
     <MESSAGE value="Implement airline core service with controller, service, and repository layers" />
     <MESSAGE value="Add aircraft model with request and response payloads, and implement status enum" />
     <MESSAGE value="Implement aircraft service with controller, service, and repository layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement aircraft service with controller, service, and repository layers" />
+    <MESSAGE value="Implement aircraft service with controller, service, repository, and mapper layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement aircraft service with controller, service, repository, and mapper layers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

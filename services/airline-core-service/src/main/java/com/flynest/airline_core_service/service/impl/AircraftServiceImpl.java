@@ -33,6 +33,9 @@ public class AircraftServiceImpl implements AircraftService {
     public AircraftResponse createAircraft(AircraftRequest aircraftRequest, Long ownerId) {
         Airline airline = airlineRepository.findByOwnerId(ownerId).orElseThrow(() -> new RuntimeException("Airline not found for ownerId: " + ownerId));
         Aircraft aircraft = AircraftMapper.toEntity(aircraftRequest, airline);
+        if(aircraftRepository.existsByCodeIgnoreCase(aircraft.getCode())) {
+            throw new RuntimeException("Aircraft with code " + aircraft.getCode() + " already exists");
+        }
         Aircraft savedAircraft = aircraftRepository.save(aircraft);
         return AircraftMapper.toResponse(savedAircraft);
     }
@@ -41,6 +44,9 @@ public class AircraftServiceImpl implements AircraftService {
     public AircraftResponse updateAircraft(AircraftRequest aircraftRequest, Long ownerId) {
         Airline airline = airlineRepository.findByOwnerId(ownerId).orElseThrow(() -> new RuntimeException("Airline not found for ownerId: " + ownerId));
         Aircraft aircraftToUpdate = aircraftRepository.findByCode(aircraftRequest.getCode()).orElseThrow(() -> new RuntimeException("Aircraft not found for id: " + aircraftRequest.getCode()));
+
+        //TODO: might be change that ...id, and airlineid based  and  code bases
+
         AircraftMapper.updateEntity(aircraftToUpdate, aircraftRequest);
         Aircraft updatedAircraft = aircraftRepository.save(aircraftToUpdate);
         return AircraftMapper.toResponse(updatedAircraft);
