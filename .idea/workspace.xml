@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement user service with JWT authentication, user retrieval, and profile management">
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/FlightOpsServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/test/java/com/flynest/flight_ops_service/FlightOpsServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Add flight-ops-service module with initial setup and configuration">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/enums/FlightStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/model/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776065404888</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add flight-ops-service module with initial setup and configuration">
+      <option name="closed" value="true" />
+      <created>1776499232186</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776499232186</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +257,8 @@
     <MESSAGE value="Configure server settings and update project structure" />
     <MESSAGE value="Add initial implementation of location service with API response and Docker setup" />
     <MESSAGE value="Implement City and Airport models with corresponding controller, service, and repository layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement City and Airport models with corresponding controller, service, and repository layers" />
+    <MESSAGE value="Add flight-ops-service module with initial setup and configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add flight-ops-service module with initial setup and configuration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
