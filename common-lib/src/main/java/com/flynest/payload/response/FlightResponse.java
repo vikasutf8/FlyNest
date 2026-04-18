@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 /**
  * FlightResponse
@@ -30,33 +31,17 @@ public class FlightResponse {
 
     private String flightNumber;
 
-    private Long airlineId;
-    private Long aircraftId;
+    private AirlineResponse airline;
+    private AircraftResponse aircraft;
+    private AirportResponse departureAirport;
+    private AirportResponse arrivalAirport;
 
-    private Long departureAirportId;
-    private Long arrivalAirportId;
+    private LocalDateTime departureTime;
+    private LocalDateTime arrivalTime;
 
-    // ───── Timing ─────
-    private Instant departureTime;
-    private Instant arrivalTime;
-
-    private Instant estimatedDepartureTime;
-    private Instant estimatedArrivalTime;
-
-    // ───── Status ─────
     private FlightStatus status;
-
-    // ───── Enrichment (optional) ─────
-    private String departureAirportName;
-    private String departureAirportCode;
-
-    private String arrivalAirportName;
-    private String arrivalAirportCode;
-
-    // ───── Derived Fields ─────
-    private Long durationMinutes;
-    private Boolean isActive;
-    private Boolean isDelayed;
+    private Double lowestPrice;
+    private Integer totalAvailableSeats;
 
     // ───── Audit ─────
     private Instant createdAt;

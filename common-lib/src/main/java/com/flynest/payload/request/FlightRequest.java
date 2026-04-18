@@ -62,30 +62,30 @@ public class FlightRequest {
     // BUSINESS VALIDATIONS
     // =========================================================
 
-    /**
-     * Departure & arrival airport cannot be same
-     */
-    @AssertTrue(message = "Departure and arrival airports must be different")
-    public boolean isAirportsValid() {
-        if (departureAirportId == null || arrivalAirportId == null) return true;
-        return !departureAirportId.equals(arrivalAirportId);
-    }
-
-    /**
-     * Arrival must be after departure
-     */
-    @AssertTrue(message = "Arrival time must be after departure time")
-    public boolean isTimeValid() {
-        if (departureTime == null || arrivalTime == null) return true;
-        return arrivalTime.isAfter(departureTime);
-    }
-
-    /**
-     * Estimated times must be logical if provided
-     */
-    @AssertTrue(message = "Estimated arrival must be after estimated departure")
-    public boolean isEstimatedTimeValid() {
-        if (estimatedDepartureTime == null || estimatedArrivalTime == null) return true;
-        return estimatedArrivalTime.isAfter(estimatedDepartureTime);
-    }
+//    /**
+//     * Departure & arrival airport cannot be same
+//     */
+//    @AssertTrue(message = "Departure and arrival airports must be different")
+//    public boolean isAirportsValid() {
+//        if (departureAirportId == null || arrivalAirportId == null) return true;
+//        return !departureAirportId.equals(arrivalAirportId);
+//    }
+//
+//    /**
+//     * Arrival must be after departure
+//     */
+//    @AssertTrue(message = "Arrival time must be after departure time")
+//    public boolean isTimeValid() {
+//        if (departureTime == null || arrivalTime == null) return true;
+//        return arrivalTime.isAfter(departureTime);
+//    }
+//
+//    /**
+//     * Estimated times must be logical if provided
+//     */
+//    @AssertTrue(message = "Estimated arrival must be after estimated departure")
+//    public boolean isEstimatedTimeValid() {
+//        if (estimatedDepartureTime == null || estimatedArrivalTime == null) return true;
+//        return estimatedArrivalTime.isAfter(estimatedDepartureTime);
+//    }
 }

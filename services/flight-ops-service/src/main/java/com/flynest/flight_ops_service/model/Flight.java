@@ -1,6 +1,7 @@
 package com.flynest.flight_ops_service.model;
 
 
+import com.flynest.enums.FlightStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
