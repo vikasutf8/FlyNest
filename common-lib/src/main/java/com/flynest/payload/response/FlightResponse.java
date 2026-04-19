@@ -35,7 +35,7 @@ public class FlightResponse {
     private AircraftResponse aircraft;
     private AirportResponse departureAirport;
     private AirportResponse arrivalAirport;
-
+//----------schudles
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
 

@@ -30,7 +30,7 @@ public class FlightRequest {
 
     @NotNull(message = "Airline ID is required")
     @Positive(message = "Airline ID must be positive")
-    private Long airlineId;
+    private Long airlineId; //Todo : remove it later
 
     @NotNull(message = "Aircraft ID is required")
     @Positive(message = "Aircraft ID must be positive")
@@ -44,19 +44,19 @@ public class FlightRequest {
     @Positive(message = "Arrival airport ID must be positive")
     private Long arrivalAirportId;
 
+
+    private FlightStatus status;
+
     // ───── Timing (CRITICAL) ─────
 
-    @NotNull(message = "Departure time is required")
-    private Instant departureTime;
+//    @NotNull(message = "Departure time is required")
+//    private Instant departureTime;
+//
+//    @NotNull(message = "Arrival time is required")
+//    private Instant arrivalTime;
 
-    @NotNull(message = "Arrival time is required")
-    private Instant arrivalTime;
-
-    private Instant estimatedDepartureTime;
-    private Instant estimatedArrivalTime;
-
-    // Optional for update scenarios
-    private FlightStatus status;
+//    private Instant estimatedDepartureTime;
+//    private Instant estimatedArrivalTime;
 
     // =========================================================
     // BUSINESS VALIDATIONS

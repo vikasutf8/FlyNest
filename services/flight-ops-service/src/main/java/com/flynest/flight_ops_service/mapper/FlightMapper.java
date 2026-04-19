@@ -76,7 +76,7 @@ public class FlightMapper {
     // =========================================================
     // ENTITY → RESPONSE (LIGHT VERSION)
     // =========================================================
-
+//have to change toResponse
     public static FlightResponse toBasicResponse(Flight flight) {
         if (flight == null) return null;
 
@@ -107,7 +107,7 @@ public class FlightMapper {
     // =========================================================
     // REQUEST → ENTITY (CREATE)
     // =========================================================
-
+//TODO:later we know where its comes
     public static Flight toEntity(FlightRequest request) {
         if (request == null) return null;
 
