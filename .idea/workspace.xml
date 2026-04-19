@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: implement flight service with CRUD operations and add home controller">
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightInstanceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightInstanceResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/model/FlightInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/FlightInstanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: add FlightInstance entity, controller, repository, service, and request/response models">
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightInstanceMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -330,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776601627832</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: add FlightInstance entity, controller, repository, service, and request/response models">
+      <option name="closed" value="true" />
+      <created>1776603681285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1776603681286</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +366,8 @@
     <MESSAGE value="Add airline core service with initial setup, including application configuration, Maven wrapper, and essential files" />
     <MESSAGE value="chore: service and mapper design" />
     <MESSAGE value="feat: implement flight service with CRUD operations and add home controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement flight service with CRUD operations and add home controller" />
+    <MESSAGE value="feat: add FlightInstance entity, controller, repository, service, and request/response models" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add FlightInstance entity, controller, repository, service, and request/response models" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
