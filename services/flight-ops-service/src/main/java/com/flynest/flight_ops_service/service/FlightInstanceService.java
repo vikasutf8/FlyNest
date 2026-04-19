@@ -5,6 +5,8 @@ import com.flynest.payload.response.FlightInstanceResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.time.LocalDate;
+
 
 public interface FlightInstanceService {
 
@@ -17,7 +19,7 @@ public interface FlightInstanceService {
             Long airlineId,
             Long departureAirportId,
             Long arrivalAirportId,
-            Long onDate,
+            LocalDate onDate,
 
             Long flightId, Pageable pageable);
 }

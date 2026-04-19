@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: add FlightInstance entity, controller, repository, service, and request/response models">
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightInstanceMapper.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: implement FlightInstance CRUD operations and add search functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightInstanceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightInstanceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/FlightInstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/FlightInstanceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -334,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776603681286</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: implement FlightInstance CRUD operations and add search functionality">
+      <option name="closed" value="true" />
+      <created>1776605228421</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1776605228421</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +374,8 @@
     <MESSAGE value="chore: service and mapper design" />
     <MESSAGE value="feat: implement flight service with CRUD operations and add home controller" />
     <MESSAGE value="feat: add FlightInstance entity, controller, repository, service, and request/response models" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add FlightInstance entity, controller, repository, service, and request/response models" />
+    <MESSAGE value="feat: implement FlightInstance CRUD operations and add search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement FlightInstance CRUD operations and add search functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,6 +2,7 @@ package com.flynest.flight_ops_service.mapper;
 
 
 import com.flynest.enums.FlightStatus;
+import com.flynest.flight_ops_service.model.Flight;
 import com.flynest.flight_ops_service.model.FlightInstance;
 import com.flynest.payload.request.FlightInstanceRequest;
 import com.flynest.payload.response.AircraftResponse;
@@ -36,11 +37,12 @@ public class FlightInstanceMapper {
     // REQUEST → ENTITY (CREATE)
     // =========================================================
 
-    public static FlightInstance toEntity(FlightInstanceRequest request) {
+    public static FlightInstance toEntity(FlightInstanceRequest request, Flight flight) {
         if (request == null) return null;
 
         return FlightInstance.builder()
 //                .flightId(request.getFlightId())
+                .flight(flight)
                 .airlineId(request.getAirlineId())
                 .departureAirportId(request.getDepartureAirportId())
                 .arrivalAirportId(request.getArrivalAirportId())
