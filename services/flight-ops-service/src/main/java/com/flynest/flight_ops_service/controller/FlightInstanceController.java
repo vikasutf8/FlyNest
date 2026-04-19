@@ -15,6 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+
 @RestController
 @RequestMapping("/api/v1/flight-instances")
 @RequiredArgsConstructor
@@ -60,7 +62,7 @@ public class FlightInstanceController {
             @RequestParam(required = false) Long airlineId,
             @RequestParam(required = false) Long departureAirportId,
             @RequestParam(required = false) Long arrivalAirportId,
-            @RequestParam(required = false) Long onDate,           // epoch ms — e.g. 1712947200000
+            @RequestParam(required = false) LocalDate onDate,           // epoch ms — e.g. 1712947200000
             @RequestParam(required = false) Long flightId,
 
             @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.ASC)

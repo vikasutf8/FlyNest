@@ -40,5 +40,24 @@ fu string getFormatedDuration() {
     // gap between departure time and arrivaltime ---hrs ,mins
 }
 
+### Flight Schuedule
+
+id
+Flight flight manay to one
+departureAirportId
+arrivalAirportId
+
+departureTime
+arrivalTime
+
+startDate
+endDate
+
+List<DayOfWeek> operatingDays
+isActive
+
+
+
+
 
 
