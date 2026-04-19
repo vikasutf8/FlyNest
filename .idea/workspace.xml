@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="chore: service and mapper design">
-      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/HomeController.java" afterDir="false" />
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: implement flight service with CRUD operations and add home controller">
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightInstanceRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightInstanceResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightInstanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/model/FlightInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightInstanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/FlightInstanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightInstanceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/request/FlightRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/src/main/java/com/flynest/payload/response/FlightResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,19 +26,19 @@
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedChatMode">
-    <option name="chatModeId" value="Agent" />
+    <option name="chatModeId" value="Ask" />
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
-      <entry key="chat-panel" value="GPT-5.2" />
-      <entry key="agent-panel" value="GPT-5.2" />
+      <entry key="chat-panel" value="Claude Haiku 4.5" />
+      <entry key="agent-panel" value="Claude Haiku 4.5" />
     </selectedModels>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -321,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776525510610</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: implement flight service with CRUD operations and add home controller">
+      <option name="closed" value="true" />
+      <created>1776601627832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1776601627832</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +361,8 @@
     <MESSAGE value="Add airline and aircraft entities, repositories, services, and controllers" />
     <MESSAGE value="Add airline core service with initial setup, including application configuration, Maven wrapper, and essential files" />
     <MESSAGE value="chore: service and mapper design" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: service and mapper design" />
+    <MESSAGE value="feat: implement flight service with CRUD operations and add home controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement flight service with CRUD operations and add home controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

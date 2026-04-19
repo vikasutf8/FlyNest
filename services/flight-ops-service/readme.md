@@ -14,6 +14,31 @@
 8. createdAt
 9. updateAt
 
+### flightInstance
+
+id
+arilineId
+flight  --- many to one
+
+departureAirportId
+arrivalAirportId
+scheduleId
+
+departureTime
+arrivalTime
+
+totalSeats
+availableSeats
+FlightStatus status
+
+minAdvanceBookingDays
+maxAdvanceBookingDays
+
+isActive
+
+fu string getFormatedDuration() {
+    // gap between departure time and arrivaltime ---hrs ,mins
+}
 
 
 
