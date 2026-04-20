@@ -1,1 +1,17 @@
-.idea/
+# Ignore everything in .idea
+.idea/*
+
+# BUT allow important shared configs
+!.idea/codeStyles
+!.idea/codeStyles/*
+!.idea/runConfigurations
+!.idea/runConfigurations/*
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+
+# Always ignore user-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf

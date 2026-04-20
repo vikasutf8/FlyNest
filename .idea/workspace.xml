@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="Implement aircraft service with controller, service, repository, and mapper layers">
+    <list default="true" id="de235136-e836-4b61-bdb7-3383ec54231f" name="Changes" comment="feat: add FlightSchedule entity, service, controller, and mapper for flight scheduling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AircraftServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/airline-core-service/src/main/java/com/flynest/airline_core_service/service/impl/AircraftServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightScheduleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/mapper/FlightScheduleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/repository/FlightScheduleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightScheduleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/flight-ops-service/src/main/java/com/flynest/flight_ops_service/service/Impl/FlightScheduleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +20,18 @@
       <entry key="_/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice" value="3BvBAGlnbD2vrj3f9YEXOILAxla" />
     </persistenceIdMap>
   </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Ask" />
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="chat-panel" value="Claude Haiku 4.5" />
+      <entry key="agent-panel" value="Claude Haiku 4.5" />
+    </selectedModels>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -79,29 +89,29 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.location-service.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AirlineCoreServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.LocationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-work-core-service&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.location-service.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.AirlineCoreServiceApplication.executor": "Run",
+    "Spring Boot.LocationServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev-work-flight-ops",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/vikasarya/EndRevist/FlyNest Booking Microservice/Microservice/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/services" />
@@ -113,11 +123,10 @@
       <recent name="$PROJECT_DIR$/common-lib/src/main/java/com.flynest" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.flynest.airline_core_service.controller" />
       <recent name="com.flynest.user_service.Security" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AirlineCoreServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Microservice" />
       <method v="2">
@@ -284,7 +293,71 @@
       <option name="project" value="LOCAL" />
       <updated>1776497022020</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add airline and aircraft entities, repositories, services, and controllers">
+      <option name="closed" value="true" />
+      <created>1776524282766</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1776524282766</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add airline core service with initial setup, including application configuration, Maven wrapper, and essential files">
+      <option name="closed" value="true" />
+      <created>1776524430579</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1776524430579</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: service and mapper design">
+      <option name="closed" value="true" />
+      <created>1776525510610</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1776525510610</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: implement flight service with CRUD operations and add home controller">
+      <option name="closed" value="true" />
+      <created>1776601627832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1776601627832</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add FlightInstance entity, controller, repository, service, and request/response models">
+      <option name="closed" value="true" />
+      <created>1776603681285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1776603681286</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: implement FlightInstance CRUD operations and add search functionality">
+      <option name="closed" value="true" />
+      <created>1776605228421</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1776605228421</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: enhance FlightInstance service with flight association and date filtering">
+      <option name="closed" value="true" />
+      <created>1776606272832</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1776606272832</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: add FlightSchedule entity, service, controller, and mapper for flight scheduling">
+      <option name="closed" value="true" />
+      <created>1776612832226</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1776612832226</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +383,17 @@
     <MESSAGE value="Add aircraft model with request and response payloads, and implement status enum" />
     <MESSAGE value="Implement aircraft service with controller, service, and repository layers" />
     <MESSAGE value="Implement aircraft service with controller, service, repository, and mapper layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement aircraft service with controller, service, repository, and mapper layers" />
+    <MESSAGE value="Add flight-ops-service module with initial setup and configuration" />
+    <MESSAGE value="Add flight entity and request/response models for flight operations" />
+    <MESSAGE value="Add airline and aircraft entities, repositories, services, and controllers" />
+    <MESSAGE value="Add airline core service with initial setup, including application configuration, Maven wrapper, and essential files" />
+    <MESSAGE value="chore: service and mapper design" />
+    <MESSAGE value="feat: implement flight service with CRUD operations and add home controller" />
+    <MESSAGE value="feat: add FlightInstance entity, controller, repository, service, and request/response models" />
+    <MESSAGE value="feat: implement FlightInstance CRUD operations and add search functionality" />
+    <MESSAGE value="feat: enhance FlightInstance service with flight association and date filtering" />
+    <MESSAGE value="feat: add FlightSchedule entity, service, controller, and mapper for flight scheduling" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add FlightSchedule entity, service, controller, and mapper for flight scheduling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
