@@ -1,0 +1,15 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: location-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/saas-booking
+    username: pos-booking
+    password: pos-booking
+  jpa:
+    hibernate:
+      ddl-auto: update   # or create / create-drop
+    show-sql: true
