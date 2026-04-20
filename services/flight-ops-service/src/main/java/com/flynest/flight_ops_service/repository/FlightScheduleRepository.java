@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface FlightScheduleRepository extends JpaRepository<FlightSchedule, Long> {
 
+    List<FlightSchedule> findByFlightAirlineId(Long airlineId);
 
     /**
      * Find all active schedules for an airline

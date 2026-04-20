@@ -1,19 +1,13 @@
 package com.flynest.flight_ops_service.mapper;
 
-package com.flynest.flight_ops_service.mapper;
 
+import com.flynest.flight_ops_service.model.Flight;
 import com.flynest.flight_ops_service.model.FlightSchedule;
 import com.flynest.payload.request.FlightScheduleRequest;
 import com.flynest.payload.response.AirportResponse;
 import com.flynest.payload.response.FlightScheduleResponse;
 
-import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalTime;
-import java.time.ZoneOffset;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import java.time.*;
 
 /**
  * FlightScheduleMapper
@@ -31,21 +25,19 @@ public class FlightScheduleMapper {
     // REQUEST → ENTITY (CREATE)
     // =========================================================
 
-    public static FlightSchedule toEntity(FlightScheduleRequest request, Long airlineId) {
+    public static FlightSchedule toEntity(FlightScheduleRequest request, Flight flight) {
         if (request == null) return null;
 
-        String operatingDaysStr = formatOperatingDaysToString(request.getOperatingDays());
-
         return FlightSchedule.builder()
-                .flightId(request.getFlightId())
-                .airlineId(airlineId)
-                .departureAirportId(request.getDepartureAirportId())
-                .arrivalAirportId(request.getArrivalAirportId())
+                .flight(flight)
+
+                .departureAirportId(flight.getDepartureAirportId())
+                .arrivalAirportId(flight.getArrivalAirportId())
                 .departureTime(toInstant(request.getDepartureTime()))
                 .arrivalTime(toInstant(request.getArrivalTime()))
                 .startDate(request.getStartDate())
                 .endDate(request.getEndDate())
-                .operatingDays(operatingDaysStr)
+                .operatingDays(request.getOperatingDays())
                 .isActive(request.getIsActive() != null ? request.getIsActive() : Boolean.TRUE)
                 .build();
     }
@@ -56,32 +48,26 @@ public class FlightScheduleMapper {
 
     public static FlightScheduleResponse toResponse(
             FlightSchedule schedule,
-            String flightNumber,
             AirportResponse departureAirport,
             AirportResponse arrivalAirport
     ) {
         if (schedule == null) return null;
 
-        List<DayOfWeek> operatingDays = parseOperatingDaysFromString(schedule.getOperatingDays());
-        Duration duration = calculateDuration(schedule.getDepartureTime(), schedule.getArrivalTime());
 
         return FlightScheduleResponse.builder()
                 .id(schedule.getId())
-                .flightId(schedule.getFlightId())
-                .flightNumber(flightNumber)
-                .airlineId(schedule.getAirlineId())
+                .flightId(schedule.getFlight().getId())
+                .flightNumber(schedule.getFlight().getFlightNumber())
+
                 .departureAirport(departureAirport)
                 .arrivalAirport(arrivalAirport)
-                .departureTime(toLocalTime(schedule.getDepartureTime()))
-                .arrivalTime(toLocalTime(schedule.getArrivalTime()))
-                .formattedDuration(formatDuration(duration))
+                .departureTime(schedule.getDepartureTime() != null ? LocalDate.from(schedule.getDepartureTime()) : null)
+                .arrivalTime(schedule.getArrivalTime() != null ? LocalDate.from(schedule.getArrivalTime()) : null)
+
                 .startDate(schedule.getStartDate())
                 .endDate(schedule.getEndDate())
-                .operatingDays(operatingDays)
-                .formattedOperatingDays(schedule.getFormattedOperatingDays())
+                .operatingDays(schedule.getOperatingDays())
                 .isActive(schedule.getIsActive())
-                .createdAt(schedule.getCreatedAt())
-                .updatedAt(schedule.getUpdatedAt())
                 .build();
     }
 
@@ -89,41 +75,12 @@ public class FlightScheduleMapper {
     // ENTITY → RESPONSE (LIGHT VERSION)
     // =========================================================
 
-    public static FlightScheduleResponse toBasicResponse(FlightSchedule schedule) {
-        if (schedule == null) return null;
-
-        List<DayOfWeek> operatingDays = parseOperatingDaysFromString(schedule.getOperatingDays());
-        Duration duration = calculateDuration(schedule.getDepartureTime(), schedule.getArrivalTime());
-
-        return FlightScheduleResponse.builder()
-                .id(schedule.getId())
-                .flightId(schedule.getFlightId())
-                .airlineId(schedule.getAirlineId())
-                .departureTime(toLocalTime(schedule.getDepartureTime()))
-                .arrivalTime(toLocalTime(schedule.getArrivalTime()))
-                .formattedDuration(formatDuration(duration))
-                .startDate(schedule.getStartDate())
-                .endDate(schedule.getEndDate())
-                .operatingDays(operatingDays)
-                .formattedOperatingDays(schedule.getFormattedOperatingDays())
-                .isActive(schedule.getIsActive())
-                .createdAt(schedule.getCreatedAt())
-                .updatedAt(schedule.getUpdatedAt())
-                .build();
-    }
 
     // =========================================================
     // LIST MAPPING
     // =========================================================
 
-    public static List<FlightScheduleResponse> toResponseList(List<FlightSchedule> schedules) {
-        if (schedules == null) return List.of();
 
-        return schedules.stream()
-                .filter(Objects::nonNull)
-                .map(FlightScheduleMapper::toBasicResponse)
-                .collect(Collectors.toList());
-    }
 
     // =========================================================
     // UPDATE EXISTING ENTITY
@@ -133,12 +90,7 @@ public class FlightScheduleMapper {
         if (schedule == null || request == null) return;
 
         // Do NOT update flightId or airlineId
-        if (request.getDepartureAirportId() != null) {
-            schedule.setDepartureAirportId(request.getDepartureAirportId());
-        }
-        if (request.getArrivalAirportId() != null) {
-            schedule.setArrivalAirportId(request.getArrivalAirportId());
-        }
+
         if (request.getDepartureTime() != null) {
             schedule.setDepartureTime(toInstant(request.getDepartureTime()));
         }
@@ -152,7 +104,7 @@ public class FlightScheduleMapper {
             schedule.setEndDate(request.getEndDate());
         }
         if (request.getOperatingDays() != null && !request.getOperatingDays().isEmpty()) {
-            schedule.setOperatingDays(formatOperatingDaysToString(request.getOperatingDays()));
+            schedule.setOperatingDays(request.getOperatingDays());
         }
         if (request.getIsActive() != null) {
             schedule.setIsActive(request.getIsActive());
@@ -173,22 +125,9 @@ public class FlightScheduleMapper {
         return LocalTime.ofInstant(instant, ZoneOffset.UTC);
     }
 
-    private static List<DayOfWeek> formatOperatingDaysToString(List<DayOfWeek> days) {
-        if (days == null || days.isEmpty()) return "";
-        return days.stream()
-                .map(d -> String.valueOf(d.getValue()))
-                .collect(Collectors.joining(","));
-    }
 
-    private static List<DayOfWeek> parseOperatingDaysFromString(String daysStr) {
-        if (daysStr == null || daysStr.isEmpty()) return List.of();
-        return daysStr.split(",")
-                .stream()
-                .map(String::trim)
-                .map(Integer::parseInt)
-                .map(DayOfWeek::of)
-                .collect(Collectors.toList());
-    }
+
+
 
     private static Duration calculateDuration(java.time.Instant departure, java.time.Instant arrival) {
         if (departure == null || arrival == null) return null;
